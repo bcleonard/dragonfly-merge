@@ -6,6 +6,9 @@ RUN yum -y update\
  && yum -y install java-1.8.0-openjdk mysql-connector-java tomcat tomcat-webapps unzip wget\
  && yum clean all
 
+# link the mysql-connector-java.jar file
+RUN ln -s /usr/share/java/mysql-connector-java.jar /usr/share/java/tomcat
+
 EXPOSE 8080
 
 #
