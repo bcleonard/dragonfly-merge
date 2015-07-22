@@ -4,12 +4,12 @@ dragonfly-merge the container of the dragonfly application (IBM Data Merge Utili
 
 ### To start the container (without the test database container):
 ```sh
-docker run -d -p 8080:8080 dragonfly-merge
+docker run -d -p 8080:8080 bcleonard/dragonfly-merge
 ```
 
 ### To start the container (with the test database container):
 ```sh
-docker run -d -p 8080:8080 --name dragonfly-merge --link dragonfly-db dragonfly-merge
+docker run -d -p 8080:8080 --name dragonfly-merge --link dragonfly-db bcleonard/dragonfly-merge
 ```
 
 ### To test the container:
