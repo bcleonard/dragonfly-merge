@@ -14,11 +14,10 @@ EXPOSE 8080
 #
 # download and unzip the dragonfly code
 #
-ENV DRAGONFLY_VER=V3.b1g
-ENV URL https://github.com/FlatBallFlyer/IBM-Data-Merge-Utility/releases/download/$DRAGONFLY_VER/idmu.war
-
-RUN cd /usr/share/tomcat/webapps &&\
-  wget $URL
+RUN rm -rf -- /usr/share/tomcat/webapps/* &&\
+  cd /usr/share/tomcat/webapps &&\
+  wget https://github.com/FlatBallFlyer/IBM-Data-Merge-Utility/releases/download/v3.1.4/idmu-war-full-3.1.4if1.war -O ROOT.war &&\
+  chown tomcat.tomcat ROOT.war
 
 ADD run.sh /tmp/run.sh
 RUN chmod 755 /tmp/run.sh

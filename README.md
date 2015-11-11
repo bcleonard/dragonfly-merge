@@ -2,14 +2,25 @@
 
 dragonfly-merge the container of the dragonfly application (IBM Data Merge Utility).  Go [here](http://www.ssgpp.com/dragonflyhome) for more information on the [dragonfly project](http://www.ssgpp.com/dragonflyhome).
 
+### Preperation
+Before running the container, you'll need to have the following directories predefined on the container host:
+```sh
+idmu
+```
+The idmu directory will hold all the persistant data that dragonfly-merge needs.  I used:
+```sh
+/data/idmu
+```
+for the instructions below.  Just make sure you create it prior to starting the container.
+
 ### To start the container (without the test database container):
 ```sh
-docker run -d -p 8080:8080 bcleonard/dragonfly-merge
+docker run -d -p 8080:8080 -v /data/idmu:/opt/ibm/idmu bcleonard/dragonfly-merge
 ```
 
 ### To start the container (with the test database container):
 ```sh
-docker run -d -p 8080:8080 --name dragonfly-merge --link dragonfly-db bcleonard/dragonfly-merge
+docker run -d -p 8080:8080 -v /data/idmu:/opt/ibm/idmu --name dragonfly-merge --link dragonfly-db bcleonard/dragonfly-merge
 ```
 
 ### To test the container:
