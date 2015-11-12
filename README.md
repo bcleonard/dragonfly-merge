@@ -23,13 +23,23 @@ docker run -d -p 8080:8080 -v /data/idmu:/opt/ibm/idmu bcleonard/dragonfly-merge
 docker run -d -p 8080:8080 -v /data/idmu:/opt/ibm/idmu --name dragonfly-merge --link dragonfly-db bcleonard/dragonfly-merge
 ```
 
-### To test the container:
-```sh
-http://<container_host>:8080/idmu/Merge/
-```
-you should see the following message:
+### Initial Run ###
+The first time you run the container, you'll need to load the template packages.  This is not necessary for subsequent runs unless you remove the persistant data directory.
 
->"This is the Default Template"
+After the container is started, go to the following webpage:
+```sh
+http://<container_host>:8080/#Packages
+```
+
+Click on the "System Templates", "Testing Templates" and "Training Templates" in that order.  You should see a popup dialog box which indicated that package json file was loaded.
+
+### Status of dragonfly:
+To check the status of dragonfly, go to the following webpage:
+```sh
+http://<container_host>:8080/idmu/status/
+```
+
+If a page shows up, then you loaded the templates correctly and everything is working.
 
 ### To test the container (with the test database container):
 ```sh
