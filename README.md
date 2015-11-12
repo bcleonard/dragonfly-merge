@@ -7,10 +7,12 @@ Before running the container, you'll need to have the following directories pred
 ```sh
 idmu
 ```
+
 The idmu directory will hold all the persistant data that dragonfly-merge needs.  I used:
 ```sh
 /data/idmu
 ```
+
 for the instructions below.  Just make sure you create it prior to starting the container.
 
 ### To start the container (without the test database container):
@@ -45,6 +47,7 @@ If a page shows up, then you loaded the templates correctly and everything is wo
 ```sh
 http://<container_host>:8080/idmu/Merge/?DragonFlyFullName=jdbc.report.
 ```
+
 you should see a web page with a whole bunch of output.  It starts with:
 
 >"Begin Customers for {corpUrl} Contacts for: General Motors Postal Mail Address for James: 5791 Pleasant Prairie End, Dysart, PA 16188-0761 Name: Daniel SMS-Phone# (878) 555-2221"
