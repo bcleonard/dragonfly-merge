@@ -1,4 +1,4 @@
-# dragonfly-merge
+### dragonfly-merge
 
 dragonfly-merge the container of the dragonfly application (IBM Data Merge Utility).  Go [here](http://www.ssgpp.com/dragonflyhome) for more information on the [dragonfly project](http://www.ssgpp.com/dragonflyhome).
 
