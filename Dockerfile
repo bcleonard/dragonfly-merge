@@ -2,8 +2,9 @@ FROM centos:7.1.1503
 MAINTAINER Bradley Leonard <bradley@stygianresearch.com> 
 
 # install java, mysql-connector-java, tomcat, unzip, wget
-RUN yum -y update\
- && yum -y install java-1.8.0-openjdk mysql-connector-java tomcat tomcat-webapps unzip wget\
+#RUN yum -y update\
+# && yum -y install java-1.8.0-openjdk mysql-connector-java tomcat tomcat-webapps unzip wget\
+RUN yum -y install java-1.8.0-openjdk mysql-connector-java tomcat tomcat-webapps unzip wget\
  && yum clean all
 
 # link the mysql-connector-java.jar file
