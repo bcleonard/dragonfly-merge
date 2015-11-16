@@ -33,7 +33,9 @@ After the container is started, go to the following webpage:
 http://<container_host>:8080/#Packages
 ```
 
-Click on the "System Templates", "Testing Templates" and "Training Templates" in that order.  You should see a popup dialog box which indicated that package json file was loaded.
+Click on the "System Templates".  You should see a popup dialog box which indicated that package json file was loaded.
+
+The "Testing Templates" and "Training Templates" are not required.
 
 ### Status of dragonfly:
 To check the status of dragonfly, go to the following webpage:
